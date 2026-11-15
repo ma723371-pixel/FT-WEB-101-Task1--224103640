@@ -1,1 +1,145 @@
 
+:root {
+    --main-color: #2563eb;
+    --background-color: #f4f7fb;
+    --text-color: #1e293b;
+    --card-color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--card-color);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 70px 10%;
+}
+
+.profile-info h1 {
+    font-size: 40px;
+    color: var(--main-color);
+}
+
+.profile-info p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 25px;
+    padding: 30px 8%;
+}
+
+.card {
+    flex: 1;
+    padding: 25px;
+    background-color: var(--card-color);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    color: var(--main-color);
+}
+
+/* Contact Form */
+.contact {
+    padding: 40px 10%;
+}
+
+.contact form {
+    max-width: 450px;
+}
+
+.contact label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+.contact input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--card-color);
+}
+
+/* Dark Mode */
+body.dark {
+    --background-color: #111827;
+    --text-color: #f9fafb;
+    --card-color: #1f2937;
+    --main-color: #60a5fa;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
